@@ -112,7 +112,7 @@
         document.getElementById('recordForm').style.display = "none";
         document.getElementById('recordIDcontainer').style.display = "none";
         
-        let id = Number(window.prompt('Enter id'));
+        let id = Number(window.prompt('Enter ID:'));
         fetch(document.getElementById('endpoint').value + '/' + id)
           .then(response => {
             if (!response.ok) {
@@ -222,7 +222,7 @@
       function deleteRecord() {
         document.getElementById('recordForm').style.display = "none";
         document.getElementById('recordIDcontainer').style.display = "none";
-        let id = Number(window.prompt('Enter id'));
+        let id = Number(window.prompt('Enter ID:'));
         fetch(document.getElementById('endpoint').value + '/' + id, {
           method: 'DELETE'
         })
